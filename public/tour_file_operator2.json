@@ -1,0 +1,12 @@
+{
+    "images": [
+        "https://tourradar.kitwebme.com/public/img/koldalen-4-1384902.jpg",
+        "https://tourradar.kitwebme.com/public/img/snowy-mountain.jpg"
+    ],
+    "title": "Highlights of Asia",
+    "operator": "Travel 1",
+    "price": 45678,
+    "created_at": "2022-02-26 12:00:00",
+    "updated_at": "2022-02-26 12:02:00",
+    "operator_id":2
+}
