@@ -5,12 +5,9 @@ namespace Domain\App\Models;
 use Domain\Tours\Models\Tour;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\hasMany;
 
 class Image extends Model
 {
-
-    protected $connection = 'mysql';
 
     protected $table = 'images';
 

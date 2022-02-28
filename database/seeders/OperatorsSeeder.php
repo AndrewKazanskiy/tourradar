@@ -16,20 +16,7 @@ class OperatorsSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('mysql')->table('operators')->insert([
-            [
-                'name' => 'Operator 1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name' => 'Operator 2',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-        ]);
-
-        DB::connection('imports_db')->table('operators')->insert([
+        DB::table('operators')->insert([
             [
                 'name' => 'Operator 1',
                 'created_at' => Carbon::now(),

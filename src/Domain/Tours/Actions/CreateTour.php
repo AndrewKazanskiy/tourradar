@@ -2,8 +2,9 @@
 
 namespace Domain\Tours\Actions;
 
-use Domain\Imports\Models\Import;
+use Domain\App\Models\Image;
 use Domain\Tours\DataTransferObjects\CreateTourData;
+use Domain\Tours\Models\Tour;
 
 class CreateTour
 {
@@ -12,14 +13,18 @@ class CreateTour
      */
     public function execute(CreateTourData $data)
     {
-        $importOperator = Import::create([
+        $tour = Tour::create([
             'operator_id' => $data->operator_id,
             'price' => $data->price,
             'title' => $data->title,
+            'operators_tour_id' => $data->operator_tour_id
         ]);
 
-        $importOperator->overwriteImages($data->images);
+        foreach ($data->images as $link) {
+            //TODO:post processing images, saving images to AWS S3 or local storage
+            $image = Image::create(['link' =>$link, 'tour_id' => $tour->id]);
+        }
 
-        return $importOperator;
+        return $tour;
     }
 }

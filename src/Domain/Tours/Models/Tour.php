@@ -7,6 +7,7 @@ use Domain\App\Models\Operator;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\hasMany;
+use Illuminate\Support\Collection;
 
 class Tour extends Model
 {
